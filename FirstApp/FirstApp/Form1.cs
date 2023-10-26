@@ -1,5 +1,11 @@
 namespace FirstApp
 {
+    //known bugs
+    //-using an operator twice in a row crashes (test for operator before operating on
+    // incorrect number format)
+    //-typing on top of the number on the screen from previous operation 
+    // when the op is '=' appends the previous result insread of replacing it
+    // (add special case for '=' operator
     public partial class Form1 : Form
     {
         double? store;//previous number in memory, dik ? mn b3d stype bach n9dr nrj3ha null
