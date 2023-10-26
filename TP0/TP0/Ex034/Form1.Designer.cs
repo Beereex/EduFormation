@@ -104,6 +104,7 @@
             btnRechercher.TabIndex = 7;
             btnRechercher.Text = "Rechercher";
             btnRechercher.UseVisualStyleBackColor = true;
+            btnRechercher.Click += btnRechercher_Click;
             // 
             // Form1
             // 

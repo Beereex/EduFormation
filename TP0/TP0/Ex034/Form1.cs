@@ -58,7 +58,12 @@ namespace Ex034
         {
             Client newClient = createClient(txtPrenom.Text, txtNom.Text, txtDdn.Text);
             addClient(newClient);
-            clearTextBoxes();          
+            clearTextBoxes();
+        }
+
+        private void btnRechercher_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
