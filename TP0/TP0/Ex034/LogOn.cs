@@ -16,5 +16,10 @@ namespace Ex034
         {
             InitializeComponent();
         }
+
+        private void LogOn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

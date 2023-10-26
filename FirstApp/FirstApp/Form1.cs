@@ -106,7 +106,7 @@ namespace FirstApp
                 Screen.Text = "0";
             }
         }
-
+        tttyiykhjyu;
         private void digit_comma_Click(object sender, EventArgs e)
         {
             if (!Screen.Text.Contains(","))
