@@ -47,12 +47,13 @@
             op_c = new Button();
             op_delete = new Button();
             op_equals = new Button();
+            prevNum = new TextBox();
             SuspendLayout();
             // 
             // digit_0
             // 
             digit_0.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_0.Location = new Point(12, 298);
+            digit_0.Location = new Point(14, 331);
             digit_0.Name = "digit_0";
             digit_0.Size = new Size(118, 54);
             digit_0.TabIndex = 0;
@@ -62,12 +63,12 @@
             // 
             // Screen
             // 
-            Screen.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Screen.Location = new Point(12, 12);
+            Screen.Font = new Font("Stencil", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            Screen.Location = new Point(14, 12);
             Screen.MaxLength = 15;
             Screen.Name = "Screen";
             Screen.ReadOnly = true;
-            Screen.Size = new Size(242, 39);
+            Screen.Size = new Size(242, 36);
             Screen.TabIndex = 1;
             Screen.Text = "0";
             Screen.TextAlign = HorizontalAlignment.Right;
@@ -75,7 +76,7 @@
             // digit_1
             // 
             digit_1.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_1.Location = new Point(12, 238);
+            digit_1.Location = new Point(14, 271);
             digit_1.Name = "digit_1";
             digit_1.Size = new Size(56, 54);
             digit_1.TabIndex = 0;
@@ -86,7 +87,7 @@
             // digit_2
             // 
             digit_2.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_2.Location = new Point(74, 238);
+            digit_2.Location = new Point(76, 271);
             digit_2.Name = "digit_2";
             digit_2.Size = new Size(56, 54);
             digit_2.TabIndex = 0;
@@ -97,7 +98,7 @@
             // digit_3
             // 
             digit_3.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_3.Location = new Point(136, 238);
+            digit_3.Location = new Point(138, 271);
             digit_3.Name = "digit_3";
             digit_3.Size = new Size(56, 54);
             digit_3.TabIndex = 0;
@@ -108,7 +109,7 @@
             // digit_4
             // 
             digit_4.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_4.Location = new Point(12, 178);
+            digit_4.Location = new Point(14, 211);
             digit_4.Name = "digit_4";
             digit_4.Size = new Size(56, 54);
             digit_4.TabIndex = 0;
@@ -119,7 +120,7 @@
             // digit_5
             // 
             digit_5.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_5.Location = new Point(74, 178);
+            digit_5.Location = new Point(76, 211);
             digit_5.Name = "digit_5";
             digit_5.Size = new Size(56, 54);
             digit_5.TabIndex = 0;
@@ -130,7 +131,7 @@
             // digit_6
             // 
             digit_6.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_6.Location = new Point(136, 178);
+            digit_6.Location = new Point(138, 211);
             digit_6.Name = "digit_6";
             digit_6.Size = new Size(56, 54);
             digit_6.TabIndex = 0;
@@ -141,7 +142,7 @@
             // digit_7
             // 
             digit_7.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_7.Location = new Point(12, 118);
+            digit_7.Location = new Point(14, 151);
             digit_7.Name = "digit_7";
             digit_7.Size = new Size(56, 54);
             digit_7.TabIndex = 0;
@@ -152,7 +153,7 @@
             // digit_8
             // 
             digit_8.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_8.Location = new Point(74, 118);
+            digit_8.Location = new Point(76, 151);
             digit_8.Name = "digit_8";
             digit_8.Size = new Size(56, 54);
             digit_8.TabIndex = 0;
@@ -163,7 +164,7 @@
             // digit_9
             // 
             digit_9.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_9.Location = new Point(136, 118);
+            digit_9.Location = new Point(138, 151);
             digit_9.Name = "digit_9";
             digit_9.Size = new Size(56, 54);
             digit_9.TabIndex = 0;
@@ -174,7 +175,7 @@
             // digit_comma
             // 
             digit_comma.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            digit_comma.Location = new Point(136, 298);
+            digit_comma.Location = new Point(138, 331);
             digit_comma.Name = "digit_comma";
             digit_comma.Size = new Size(56, 54);
             digit_comma.TabIndex = 0;
@@ -185,47 +186,51 @@
             // op_add
             // 
             op_add.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_add.Location = new Point(198, 58);
+            op_add.Location = new Point(200, 91);
             op_add.Name = "op_add";
             op_add.Size = new Size(56, 54);
             op_add.TabIndex = 0;
             op_add.Text = "+";
             op_add.UseVisualStyleBackColor = true;
+            op_add.Click += op_add_Click;
             // 
             // op_sub
             // 
             op_sub.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_sub.Location = new Point(198, 118);
+            op_sub.Location = new Point(200, 151);
             op_sub.Name = "op_sub";
             op_sub.Size = new Size(56, 54);
             op_sub.TabIndex = 0;
             op_sub.Text = "-";
             op_sub.UseVisualStyleBackColor = true;
+            op_sub.Click += op_sub_Click;
             // 
             // op_div
             // 
             op_div.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_div.Location = new Point(198, 178);
+            op_div.Location = new Point(200, 211);
             op_div.Name = "op_div";
             op_div.Size = new Size(56, 54);
             op_div.TabIndex = 0;
             op_div.Text = "/";
             op_div.UseVisualStyleBackColor = true;
+            op_div.Click += op_div_Click;
             // 
             // op_mult
             // 
             op_mult.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_mult.Location = new Point(136, 58);
+            op_mult.Location = new Point(138, 91);
             op_mult.Name = "op_mult";
             op_mult.Size = new Size(56, 54);
             op_mult.TabIndex = 0;
             op_mult.Text = "x";
             op_mult.UseVisualStyleBackColor = true;
+            op_mult.Click += op_mult_Click;
             // 
             // op_c
             // 
             op_c.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_c.Location = new Point(12, 57);
+            op_c.Location = new Point(14, 90);
             op_c.Name = "op_c";
             op_c.Size = new Size(56, 54);
             op_c.TabIndex = 0;
@@ -236,7 +241,7 @@
             // op_delete
             // 
             op_delete.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_delete.Location = new Point(74, 57);
+            op_delete.Location = new Point(76, 90);
             op_delete.Name = "op_delete";
             op_delete.Size = new Size(56, 54);
             op_delete.TabIndex = 0;
@@ -247,19 +252,36 @@
             // op_equals
             // 
             op_equals.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            op_equals.Location = new Point(198, 238);
+            op_equals.Location = new Point(200, 271);
             op_equals.Name = "op_equals";
             op_equals.Size = new Size(56, 114);
             op_equals.TabIndex = 0;
             op_equals.Text = "=";
             op_equals.UseVisualStyleBackColor = true;
-            op_equals.Click += digit_0_Click;
+            op_equals.Click += op_equals_Click;
+            // 
+            // prevNum
+            // 
+            prevNum.BorderStyle = BorderStyle.None;
+            prevNum.Enabled = false;
+            prevNum.Font = new Font("Stencil", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            prevNum.ForeColor = SystemColors.GrayText;
+            prevNum.Location = new Point(12, 57);
+            prevNum.MaxLength = 15;
+            prevNum.Name = "prevNum";
+            prevNum.ReadOnly = true;
+            prevNum.Size = new Size(244, 23);
+            prevNum.TabIndex = 1;
+            prevNum.Text = "0";
+            prevNum.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(265, 364);
+            AutoSize = true;
+            ClientSize = new Size(265, 394);
+            Controls.Add(prevNum);
             Controls.Add(Screen);
             Controls.Add(op_mult);
             Controls.Add(op_div);
@@ -279,12 +301,11 @@
             Controls.Add(digit_1);
             Controls.Add(op_equals);
             Controls.Add(digit_0);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             Name = "Form1";
             ShowIcon = false;
             Text = "Calculator";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -310,5 +331,6 @@
         private Button op_c;
         private Button op_delete;
         private Button op_equals;
+        private TextBox prevNum;
     }
 }
