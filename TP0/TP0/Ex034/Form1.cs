@@ -19,7 +19,7 @@ namespace Ex034
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private Client createClient(String Nom, String Prenom, String DdN)
@@ -41,6 +41,12 @@ namespace Ex034
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
+            foreach(Client i in  tabClient )
+            {
+                Console.WriteLine("Client N° {0}: {1} {2}, {3}", i.Id, i.Nom, i.Prenom, i.DateDeNaissance);
+                MessageBox.Show(
+                "Client N° "+ i.Id+": " + i.Nom + " " + i.Prenom +", " + i.DateDeNaissance);
+            }
         }
 
         private void clearTextBoxes()
