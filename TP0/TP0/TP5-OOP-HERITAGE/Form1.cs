@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace TP5_OOP_HERITAGE
 {
     public partial class Form1 : Form
@@ -99,6 +101,7 @@ namespace TP5_OOP_HERITAGE
                 if (target == null)
                 {
                     MessageBox.Show("package not found!");
+                    Debug.WriteLine("debugger");
                 }
                 else
                 {
